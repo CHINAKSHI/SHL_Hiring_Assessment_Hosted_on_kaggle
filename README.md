@@ -1,7 +1,7 @@
 
-**The file required by the report, including the process I followed and the interpretation of the visualizations, has been uploaded in the 'Report' folder.**
+**The report required for explaining the approach, preprocessing steps, pipeline architecture, and evaluation results, and the interpretation of the visualizations, has been uploaded in the 'Report' folder.**
 
-# Audio Feature Extraction and Grammar Score Prediction
+## SHL Hiring Assessment (Audio Feature Extraction and Grammar Score Prediction)
 
 This project aims to predict grammar scores from raw `.wav` audio files using various audio feature extraction techniques and machine learning models.
 
