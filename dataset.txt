@@ -1,0 +1,11 @@
+﻿Dataset Description
+The dataset consists of audio files and their respective labels.
+You can download the audios from -
+kaggle competitions download -c shl-intern-hiring-assessment
+
+
+Each file is a standard audio format (e.g., WAV).
+CSV File
+train.csv - This file contains the list of audio file names and their respective labels for training.
+test.csv - This file contains the file names (unique identifiers) for the audio files.
+sample_submission.csv - This file contains an example of a valid submission.
