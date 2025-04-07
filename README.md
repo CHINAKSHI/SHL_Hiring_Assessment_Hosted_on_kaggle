@@ -63,4 +63,5 @@ git clone <repository-url>
 cd <repository-directory>
 pip install -r requirements.txt
 
+**The file required by the report, including the process I followed and the interpretation of the visualizations, has been uploaded in the 'Report' folder.**
 
