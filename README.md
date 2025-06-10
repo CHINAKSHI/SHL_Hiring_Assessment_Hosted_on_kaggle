@@ -1,11 +1,8 @@
 # 🎵 SHL Hiring Assessment (Audio Feature Extraction and Grammar Score Prediction)
 
-# 🎵 Audio Grammar Scoring
-
 This repository contains code, analysis, and models for predicting grammar quality scores from raw `.wav` audio files using audio feature extraction techniques and machine learning.
 
 📄 **Note:** The detailed report explaining the approach, preprocessing steps, pipeline architecture, evaluation results, and interpretation of visualizations is available in the `Report/` folder.
-
 
 
 ---
@@ -132,18 +129,4 @@ matplotlib
 scikit-learn  
 xgboost  
 librosa
-
----
-
-## 🏦 Dataset Structure
-
-```bash
-dataset/
-├── audio_files/
-│   ├── audio_1.wav
-│   ├── audio_2.wav
-│   └── ...
-├── train.csv                 # Training data with filenames and grammar labels
-├── test.csv                  # Test data with filenames and dummy labels
-└── sample_submission.csv     # Submission format
 
