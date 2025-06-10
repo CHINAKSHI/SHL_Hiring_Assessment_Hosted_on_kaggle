@@ -1,4 +1,4 @@
-# 🎵 SHL Hiring Assessment (Audio Feature Extraction and Grammar Score Prediction)
+# 🎵 Audio Feature Extraction and Grammar Score Prediction(SHL Hiring Assessment)
 
 This repository contains code, analysis, and models for predicting grammar quality scores from raw `.wav` audio files using audio feature extraction techniques and machine learning.
 
