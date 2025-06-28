@@ -1,118 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Grammar Score Prediction</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 40px;
-        }
-        .form-container {
-            background: white;
-            padding: 30px;
-            max-width: 800px;
-            margin: auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-        }
-        input[type="file"], input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin: 12px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        .result {
-            font-size: 1.5em;
-            color: #333;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .error {
-            color: red;
-            text-align: center;
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-        table {
-            width: 100%;
-            margin-top: 30px;
-            border-collapse: collapse;
-            font-size: 0.9em;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        audio {
-            margin-top: 20px;
-            width: 100%;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>Grammar Score Predictor</title>
 </head>
 <body>
-    <div class="form-container">
-        <h2>Grammar Score Prediction from Audio</h2>
-        <form action="/predict" method="post" enctype="multipart/form-data">
-            <label>Upload .wav file:</label>
-            <input type="file" name="audio_file" accept=".wav" required>
-            <input type="submit" value="Predict">
-        </form>
-
-        {% if prediction_text %}
-            {% if "Error" in prediction_text %}
-                <div class="error">{{ prediction_text }}</div>
-            {% else %}
-                <div class="result">{{ prediction_text }}</div>
-            {% endif %}
-        {% endif %}
-
-        {% if filename %}
-        <audio controls>
-            <source src="{{ url_for('uploaded_file', filename=filename) }}" type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-        {% endif %}
-
-        {% if feature_table %}
-        <h3>Extracted Audio Features</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Feature Name</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for name, value in feature_table %}
-                <tr>
-                    <td>{{ name }}</td>
-                    <td>{{ value | round(4) }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        {% endif %}
-    </div>
+    <h2>Upload Audio File (WAV)</h2>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="audio_file" accept=".wav" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
 </body>
 </html>
-
-
-
-
