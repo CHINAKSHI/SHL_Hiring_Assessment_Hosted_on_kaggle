@@ -1,6 +1,10 @@
 import numba
-numba.disable_jit()
+if hasattr(numba, "disable_jit"):
+    numba.disable_jit()
 
+
+
+from flask import send_from_directory
 from flask import Flask, request, render_template
 import numpy as np
 import os
