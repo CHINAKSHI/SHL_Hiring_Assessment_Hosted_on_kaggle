@@ -1,5 +1,12 @@
 # 🎵 Audio Feature Extraction and Grammar Score Prediction(SHL Hiring Assessment)
 
+## 🔗 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge&logo=render)](https://shl-hiring-assessment-hosted-on-kaggle-18.onrender.com)
+
+You can explore the deployed web app by clicking the badge above.
+
+
 This repository contains code, analysis, and models for predicting grammar quality scores from raw `.wav` audio files using audio feature extraction techniques and machine learning.
 
 📄 **Note:** The detailed report explaining the approach, preprocessing steps, pipeline architecture, evaluation results, and interpretation of visualizations is available in the `Report/` folder.
